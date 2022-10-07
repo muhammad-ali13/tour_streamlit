@@ -78,11 +78,15 @@ def single_line_handle(d):
     frm = d.split()[0]
     amnt = int(d.split()[1])
     t1 = d.split()[2]
-    remarks = d.split()[3:]
-    if len(remarks)>1:
-        remarks = ' '.join(remarks)
-    else: 
-        remarks = remarks[0]
+    remarks = d.split('#>')[1]
+
+    # remarks = d.split()[3:]
+    # if len(remarks)>1:
+    #     remarks = ' '.join(remarks)
+    # else: 
+    #     print('###############')
+    #     print(remarks)
+    #     remarks = remarks[0]
 
     t2 = []
     for i in t1.split(','):
